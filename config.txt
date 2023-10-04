@@ -1,0 +1,42 @@
+1. cd projek
+2. npm init
+3. npm install express morgan nodemon pg pg-hstore sequelize
+
+//project
+4. npm install sequelize-cli
+5. npx sequelize init
+
+//global
+- npm install -g sequelize-cli
+- sequelize init
+
+6. config user,pw,db, dll di config.js
+{
+  "development": {
+    "username": "postgres",
+    "password": "password",
+    "database": "database_fsw2",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+    "port": 5432 // ini default, bisa ganti
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
+
+7. npx sequelize db:create
+8. npx sequelize model:generate --name User --attributes name:string,age:integer
+
+
